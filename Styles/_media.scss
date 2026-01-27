@@ -7,33 +7,53 @@ $tablet: 1023px;
 $mobile-above: 768px;
 $mobile: 767px;
 
+$mobile-s-above: 481px;
+$mobile-s: 480px;
+
 @mixin desktop-above {
   @media (min-width: $desktop-above) {
     @content;
   }
 }
+
 @mixin desktop {
   @media (max-width: $desktop) {
     @content;
   }
 }
+
 @mixin tablet-above {
   @media (min-width: $tablet-above) {
     @content;
   }
 }
+
 @mixin tablet {
   @media (max-width: $tablet) {
     @content;
   }
 }
+
 @mixin mobile-above {
   @media (min-width: $mobile-above) {
     @content;
   }
 }
+
 @mixin mobile {
   @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above {
+  @media (min-width: $mobile-s-above) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (max-width: $mobile-s) {
     @content;
   }
 }
@@ -44,18 +64,10 @@ $mobile: 767px;
       @content;
     }
   }
+
   @media (hover: none) {
     &:active {
       @content;
     }
   }
 }
-.element {
-  padding-block: 100px;
-  font-size: 30px;
-  @include desktop {
-    padding-block: 50px;
-    font-size: 18px;
-  }
-}
-// не понял надо ли убирать .element
