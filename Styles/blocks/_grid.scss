@@ -19,4 +19,12 @@
       --gridColumns: 1;
     }
   }
+  &--3 {
+    @include media.desktop {
+      --gridColumns: 2;
+    }
+    @include media.mobile {
+      --gridColumns: 1;
+    }
+  }
 }
