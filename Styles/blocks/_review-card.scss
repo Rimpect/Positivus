@@ -1,4 +1,5 @@
 @use "../mixins";
+@use "../media";
 .review-card {
   --reviewCardCornerWidth: 40px;
   --reviewCardCornerOffsetLeft: 52px;
@@ -21,6 +22,8 @@
 
     @include media.mobile {
       padding: 30px;
+      --reviewCardCornerWidth: 32px;
+      --reviewCardCornerOffsetLeft: 46px;
     }
 
     &::after {
